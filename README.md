@@ -1,3 +1,96 @@
+# Bem-vindo ao ChatCFMEA!
+
+Olá! Este é o guia completo para você instalar e usar o ChatCFMEA no seu computador com Windows.
+
+O objetivo deste manual é ser o mais simples possível. Vamos te guiar em cada etapa, como se fosse uma receita de bolo. Não é necessário ter nenhum conhecimento de programação!
+
+---
+
+## Sumário Rápido
+
+Se você já instalou e só quer lembrar os comandos do dia a dia, pule para a seção:
+*   [O que fazer no dia a dia](#o-que-fazer-no-dia-a-dia)
+
+---
+
+## 1. O que é o ChatCFMEA?
+
+Imagine ter um assistente pessoal que lê todos os seus documentos em PDF e responde a qualquer pergunta que você tenha sobre eles. É exatamente isso que o ChatCFMEA faz!
+
+*   **Você pergunta:** Você faz perguntas usando suas próprias palavras, como se estivesse conversando com alguém.
+*   **Ele responde:** O sistema busca as respostas dentro dos arquivos PDF que você forneceu.
+*   **Tudo no seu computador:** O ChatCFMEA roda localmente no seu navegador de internet (como o Google Chrome ou Firefox). Ele não é um site e suas informações e documentos nunca saem do seu computador.
+
+---
+
+## 2. O que você precisa ANTES de começar
+
+Antes de instalar o ChatCFMEA, precisamos garantir que seu computador tenha três programas essenciais. Se você já os tiver, pode pular para o próximo passo.
+
+| Programa | Para que serve? | Onde baixar? |
+| :--- | :--- | :--- |
+| **1. Node.js** | É o "motor" que faz o ChatCFMEA funcionar. Sem ele, o sistema não liga. | [Baixe aqui (versão LTS)](https://nodejs.org/en) |
+| **2. GitHub Desktop** | É a ferramenta que vamos usar para "baixar" o projeto do ChatCFMEA para o seu computador de forma fácil. | [Baixe aqui](https://desktop.github.com/) |
+| **3. Chave da OpenAI** | É uma "senha" que permite que o nosso sistema use a inteligência artificial da OpenAI (a mesma do ChatGPT) para entender suas perguntas e encontrar as respostas. | [Obtenha sua chave aqui](https://platform.openai.com/api-keys) |
+
+**Como obter a Chave da OpenAI (API Key):**
+1.  Clique no link acima e crie uma conta ou faça login.
+2.  No menu, procure por "API Keys".
+3.  Clique no botão "Create new secret key" (Criar nova chave secreta).
+4.  Dê um nome para a chave (ex: `ChatCFMEA`) e clique em "Create".
+5.  **IMPORTANTE:** Copie a chave que aparecer (ela começa com `sk-...`) e guarde-a em um lugar seguro, como o Bloco de Notas. **Você não poderá vê-la novamente!**
+
+---
+
+## 3. Como baixar o projeto (sem complicação)
+
+Agora vamos usar o GitHub Desktop para copiar os arquivos do sistema para o seu computador.
+
+1.  Abra o programa **GitHub Desktop**.
+2.  No menu superior, clique em **File** e depois em **Clone repository**.
+3.  Uma janela se abrirá. Clique na aba **URL**.
+4.  No primeiro campo ("Repository URL or GitHub username/repository"), cole o seguinte endereço: `https://github.com/chatrenach/chatrenach-main`
+5.  No segundo campo ("Local path"), clique em **Choose...** e escolha uma pasta fácil de lembrar no seu computador para salvar o projeto (por exemplo, `C:\Users\SeuUsuario\Documents\ChatCFMEA`).
+6.  Clique no botão azul **Clone**.
+7.  Aguarde o programa baixar todos os arquivos. Quando terminar, você terá a pasta do projeto no local que escolheu!
+
+---
+
+## 4. Como instalar o sistema
+
+Com os arquivos baixados, precisamos "montar" o sistema. Faremos isso usando um programa que já vem com o Node.js.
+
+1.  Abra o menu Iniciar do Windows.
+2.  Digite `cmd` e pressione Enter. Uma tela preta de terminal irá aparecer. Não se assuste, vamos usar apenas dois comandos!
+3.  Primeiro, precisamos navegar até a pasta do projeto. Digite `cd` seguido de um espaço e o caminho da pasta que você escolheu no passo anterior.
+    *   *Exemplo:* `cd C:\Users\SeuUsuario\Documents\ChatCFMEA`
+    *   Pressione Enter.
+4.  Agora, digite o comando abaixo e pressione Enter. Este comando instala todas as "peças" que o sistema precisa para funcionar.
+    ```
+    npm install
+    ```
+5.  Aguarde a instalação terminar. Pode levar alguns minutos e várias linhas de texto vão aparecer. É normal!
+
+---
+
+## 5. Como configurar a chave da Inteligência Artificial
+
+Lembra daquela chave da OpenAI que você guardou? Agora vamos colocá-la no sistema.
+
+1.  Vá para a pasta do projeto que você baixou.
+2.  Você verá um arquivo chamado `.env.example`.
+3.  Faça uma cópia deste arquivo e renomeie a cópia para `.env` (apenas `.env`, sem nada antes do ponto).
+4.  Abra o novo arquivo `.env` com um editor de texto simples (como o Bloco de Notas).
+5.  Você verá o seguinte conteúdo:
+    ```
+    OPENAI_API_KEY=
+    OPENAI_CHAT_MODEL=
+    ANSWER_LANGUAGE=
+    ```
+6.  Na primeira linha, depois do sinal de igual (`=`), cole a sua chave da OpenAI (aquela que começa com `sk-...`).
+7.  Salve e feche o arquivo. Sua chave está configurada!
+
+O arquivo deve ficar assim (com a sua chave, claro):
 
 ---
 
