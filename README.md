@@ -1,76 +1,202 @@
-# Create a ChatGPT Chatbot for Your CSV, TXT, PDF Files
+📄 ChatCFMEA
+Conversar com documentos PDF de forma simples e inteligente
 
-Prelude: Please make sure you have already downloaded node on your system and the version is 18 or greater.
+O ChatCFMEA é uma aplicação que permite fazer perguntas em português para documentos PDF, como se estivesse conversando com uma pessoa.
 
-## Development
+Você adiciona os PDFs, abre o sistema no navegador e faz perguntas.
+As respostas são geradas somente com base nos documentos fornecidos.
 
-1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) for your platform.
+🧠 O que o ChatCFMEA faz?
 
-2. Clone the repo or download the ZIP
+✔️ Lê arquivos PDF
+✔️ Permite fazer perguntas em linguagem natural
+✔️ Responde com base no conteúdo dos documentos
+✔️ Mantém o contexto da conversa
 
-```
-git clone [github https url]
-```
+📌 O sistema não inventa respostas e não usa fontes externas além dos PDFs.
 
-3. Install packages
+👤 Para quem é este sistema?
 
-First run `npm install yarn -g` to install yarn globally (if you haven't already).
+Este sistema é indicado para:
 
-Then run:
+Usuários administrativos
 
-```
-yarn install
-```
+Analistas
 
-After installation, you should now see a `node_modules` folder.
+Técnicos
 
-4. Set up your `.env` file
+Gestores
 
-- Copy `.env.example` into `.env`
-  Your `.env` file should look like this:
+Qualquer pessoa que saiba usar computador e internet
 
-```
-OPENAI_API_KEY=
-OPENAI_CHAT_MODEL=
-ANSWER_LANGUAGE=
-```
+❌ Não é necessário saber programação
 
-- Visit [openai](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key) to retrieve API keys and insert into your `.env` file.
-- If you want to use gpt-4, write gpt-4 in OPENAI_CHAT_MODEL. (default: gpt-3.5-turbo)
-- For ANSWER_LANGUAGE, enter the language you want ChatGPT to answer in. (default: English)
+🖥️ O que é necessário para usar (uma única vez)
 
-5. In `utils/makechain.ts` chain change the `QA_PROMPT` for your own usecase. Change `modelName` in `new OpenAI` to `gpt-4`, if you have access to `gpt-4` api. Please verify outside this repo that you have access to `gpt-4` api, otherwise the application will not work.
+Antes de começar, você precisa de:
 
-## Convert your PDF, CSV, TXT files to embeddings
+✅ 1. Um computador com internet
+✅ 2. Node.js instalado (versão LTS)
+✅ 3. GitHub Desktop instalado
+📥 Como instalar o Node.js
 
-**This repo can load multiple PDF files**
+Acesse: https://nodejs.org
 
-1. Inside `docs` folder, add your pdf, csv, txt files or folders that contain files.
+Clique no botão LTS (recomendado)
 
-2. Run the script `npm run ingest` to 'ingest' and embed your docs. If you run into errors troubleshoot below.
+Instale normalmente (Avançar → Avançar → Concluir)
 
-3. Verify that the docstore.json and faiss.index files are successfully created in the `faiss-store` folder.
+📥 Como instalar o GitHub Desktop
 
-## Run the app
+Acesse: https://desktop.github.com
 
-Once you've verified that the embeddings and content have been successfully added to your faiss store, you can run the app `npm run dev` to launch the local dev environment, and then type a question in the chat interface.
+Clique em Download
 
-## Troubleshooting
+Instale normalmente
 
-In general, keep an eye out in the `issues` and `discussions` section of this repo for solutions.
+📌 O GitHub Desktop permite baixar projetos sem usar comandos.
 
-**General errors**
+📥 Baixar o ChatCFMEA para o computador (sem comandos)
+Passo 1️⃣ – Abrir o repositório no navegador
 
-- Make sure you're running the latest Node version. Run `node -v`
-- Try a different PDF or convert your PDF to text first. It's possible your PDF is corrupted, scanned, or requires OCR to convert to text.
-- `Console.log` the `env` variables and make sure they are exposed.
-- Make sure you're using the same versions of LangChain and Faiss as this repo.
-- Check that you've created an `.env` file that contains your valid (and working) API keys, environment and index name.
-- If you change `modelName` in `OpenAI`, make sure you have access to the api for the appropriate model.
-- Make sure you have enough OpenAI credits and a valid card on your billings account.
-- Check that you don't have multiple OPENAPI keys in your global environment. If you do, the local `env` file from the project will be overwritten by systems `env` variable.
-- Try to hard code your API keys into the `process.env` variables if there are still issues.
+Acesse o endereço do projeto no GitHub
 
-## Credit
+Clique no botão Code (verde)
 
-Frontend of this repo is inspired by [langchain-chat-nextjs](https://github.com/zahidkhawaja/langchain-chat-nextjs)
+Clique em Open with GitHub Desktop
+
+Passo 2️⃣ – Baixar o projeto
+
+O GitHub Desktop abrirá automaticamente
+
+Escolha a pasta onde deseja salvar o projeto
+
+Clique em Clone
+
+Aguarde o download terminar.
+
+📦 Preparar o sistema (obrigatório na primeira vez)
+
+Abra a pasta do projeto no seu computador
+
+Clique com o botão direito dentro da pasta
+
+Escolha Abrir no Terminal (ou Prompt de Comando)
+
+Execute:
+
+npm install
+
+
+📌 Esse comando instala automaticamente tudo que o sistema precisa.
+⏳ Pode levar alguns minutos.
+📌 Esse passo é feito apenas uma vez.
+
+🔐 Configurar a chave de acesso da IA (obrigatório)
+
+O sistema precisa de uma chave para funcionar.
+
+Passo 1️⃣ – Criar o arquivo de configuração
+
+Na pasta do projeto, crie um arquivo chamado:
+
+.env.local
+
+Passo 2️⃣ – Colocar a chave no arquivo
+
+Abra o arquivo .env.local e escreva:
+
+OPENAI_API_KEY=sua_chave_aqui
+
+
+📌 A chave deve ser obtida no site da OpenAI
+📌 Nunca compartilhe essa chave
+
+📁 Adicionar documentos PDF
+
+1️⃣ Abra a pasta chamada docs
+2️⃣ Copie para essa pasta todos os PDFs que deseja analisar
+
+🔄 Preparar os documentos (PASSO MUITO IMPORTANTE)
+
+Sempre que você:
+
+adicionar PDFs
+
+remover PDFs
+
+Execute:
+
+npm run ingest
+
+
+📌 Esse passo prepara os documentos para que o chat consiga respondê-los.
+
+▶️ Iniciar o ChatCFMEA
+
+Execute:
+
+npm run dev
+
+
+Depois, abra o navegador (Chrome, Edge, etc.) e acesse:
+
+http://localhost:3000
+
+
+🎉 O ChatCFMEA estará pronto para uso.
+
+💬 Como usar o chat
+
+Digite perguntas como:
+
+“Quais são os principais pontos do documento?”
+
+“O que o PDF fala sobre responsabilidades?”
+
+“Existe algum risco mencionado?”
+
+“Resuma o conteúdo dos PDFs”
+
+As respostas serão baseadas exclusivamente nos documentos fornecidos.
+
+🔁 O que fazer no dia a dia
+Situação	O que fazer
+Primeira vez no computador	npm install
+Adicionar ou remover PDFs	npm run ingest
+Apenas usar o chat	npm run dev
+❓ Perguntas comuns
+❓ Preciso rodar todos os comandos toda vez?
+
+Não.
+Normalmente, basta rodar:
+
+npm run dev
+
+❓ Se eu trocar os PDFs?
+
+Sempre execute:
+
+npm run ingest
+
+❓ O sistema guarda meus documentos?
+
+Não.
+Os arquivos ficam apenas no seu computador.
+
+🔒 Segurança
+
+✔️ Os PDFs não são publicados
+✔️ A chave da IA fica apenas no seu computador
+✔️ O sistema roda localmente (localhost)
+
+📌 Resumo rápido
+
+1️⃣ Instalar Node.js
+2️⃣ Instalar GitHub Desktop
+3️⃣ Clonar o projeto pelo botão Code → Open with GitHub Desktop
+4️⃣ Rodar npm install
+5️⃣ Colocar PDFs na pasta docs
+6️⃣ Rodar npm run ingest
+7️⃣ Rodar npm run dev
+8️⃣ Acessar http://localhost:3000
