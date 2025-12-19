@@ -88,8 +88,9 @@ Aguarde o download terminar.
 
 Execute:
 
-```bash
 npm install
+
+
 📌 Esse comando instala automaticamente tudo que o sistema precisa.
 ⏳ Pode levar alguns minutos.
 📌 Esse passo é feito apenas uma vez.
