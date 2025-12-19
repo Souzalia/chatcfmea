@@ -92,7 +92,9 @@ Execute:
 npm install
 ```
 
-📌 Esse comando instala automaticamente tudo que o sistema precisa.
+📌 Preparação inicial
+
+Esse comando instala automaticamente tudo que o sistema precisa.
 
 ⏳ Pode levar alguns minutos.
 
@@ -115,15 +117,14 @@ Abra o arquivo .env.local e escreva:
 OPENAI_API_KEY=sua_chave_aqui
 
 
-📌 A chave deve ser obtida no site da OpenAI
-
-📌 Nunca compartilhe essa chave
+📌 A chave deve ser obtida no site da OpenAI.
+📌 Nunca compartilhe essa chave.
 
 📁 Adicionar documentos PDF
 
-1️⃣ Abra a pasta chamada docs
+Abra a pasta chamada docs
 
-2️⃣ Copie para essa pasta todos os PDFs que deseja analisar
+Copie para essa pasta todos os PDFs que deseja analisar
 
 🔄 Preparar os documentos (PASSO MUITO IMPORTANTE)
 
@@ -142,7 +143,7 @@ npm run ingest
 
 ▶️ Iniciar o ChatCFMEA
 
-Execute:
+Execute o comando:
 
 npm run dev
 
@@ -154,26 +155,19 @@ http://localhost:3000
 🎉 O ChatCFMEA estará pronto para uso.
 
 🔁 O que fazer no dia a dia
-
 Situação	O que fazer
-
 Primeira vez no computador	npm install
-
 Adicionar ou remover PDFs	npm run ingest
-
 Apenas usar o chat	npm run dev
-
 ❓ Perguntas comuns
-
-❓ Preciso rodar todos os comandos toda vez?
+Preciso rodar todos os comandos toda vez?
 
 Não.
-
 Normalmente, basta rodar:
 
 npm run dev
 
-❓ Se eu trocar os PDFs?
+Se eu trocar os PDFs?
 
 Sempre execute:
 
@@ -182,31 +176,30 @@ npm run ingest
 
 e depois:
 
-npm run dev
+npm run dev`
 
 🔒 Segurança
 
-✔️ Os PDFs não são publicados
+Os PDFs não são publicados
 
-✔️ A chave da IA fica apenas no seu computador
+A chave da IA fica apenas no seu computador
 
-✔️ O sistema roda localmente (localhost)
+O sistema roda localmente (localhost)
 
 📌 Resumo rápido
 
-1️⃣ Instalar Node.js
+Instalar Node.js
 
-2️⃣ Instalar GitHub Desktop
+Instalar GitHub Desktop
 
-3️⃣ Clonar o projeto pelo botão Code → Open with GitHub Desktop
+Clonar o projeto pelo botão Code → Open with GitHub Desktop
 
-4️⃣ Rodar npm install
+Rodar npm install
 
-5️⃣ Colocar PDFs na pasta docs
+Colocar PDFs na pasta docs
 
-6️⃣ Rodar npm run ingest
+Rodar npm run ingest
 
-7️⃣ Rodar npm run dev
+Rodar npm run dev
 
-8️⃣ Acessar http://localhost:3000
-
+Acessar http://localhost:3000
