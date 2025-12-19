@@ -86,11 +86,11 @@ Aguarde o download terminar.
 2. Clique com o botão direito dentro da pasta  
 3. Escolha **Abrir no Terminal** (ou Prompt de Comando)
 
+Execute:
+
 ```bash
 npm install
-
-
-
+```
 
 📌 Esse comando instala automaticamente tudo que o sistema precisa.
 ⏳ Pode levar alguns minutos.
