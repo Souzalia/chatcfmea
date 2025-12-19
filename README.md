@@ -91,32 +91,39 @@ Execute:
 ```bash
 npm install
 ```
+.
 
 📌 Esse comando instala automaticamente tudo que o sistema precisa.
 ⏳ Pode levar alguns minutos.
 📌 Esse passo é feito apenas uma vez.
 
 🔐 Configurar a chave de acesso da IA (obrigatório)
+
 O sistema precisa de uma chave para funcionar.
 
 Passo 1️⃣ – Criar o arquivo de configuração
+
 Na pasta do projeto, crie um arquivo chamado:
 
 .env.local
 
 Passo 2️⃣ – Colocar a chave no arquivo
+
 Abra o arquivo .env.local e escreva:
 
 OPENAI_API_KEY=sua_chave_aqui
+
 
 📌 A chave deve ser obtida no site da OpenAI
 📌 Nunca compartilhe essa chave
 
 📁 Adicionar documentos PDF
+
 1️⃣ Abra a pasta chamada docs
 2️⃣ Copie para essa pasta todos os PDFs que deseja analisar
 
 🔄 Preparar os documentos (PASSO MUITO IMPORTANTE)
+
 Sempre que você:
 
 adicionar PDFs
@@ -127,12 +134,15 @@ Execute o comando:
 
 npm run ingest
 
+
 📌 Esse passo prepara os documentos para que o chat consiga respondê-los.
 
 ▶️ Iniciar o ChatCFMEA
+
 Execute:
 
 npm run dev
+
 
 Depois, abra o navegador (Chrome, Edge, etc.) e acesse:
 
@@ -145,29 +155,33 @@ Situação	O que fazer
 Primeira vez no computador	npm install
 Adicionar ou remover PDFs	npm run ingest
 Apenas usar o chat	npm run dev
-
 ❓ Perguntas comuns
 ❓ Preciso rodar todos os comandos toda vez?
+
 Não.
 Normalmente, basta rodar:
 
 npm run dev
 
 ❓ Se eu trocar os PDFs?
+
 Sempre execute:
 
 npm run ingest
 
-e depois
+
+e depois:
 
 npm run dev
 
 🔒 Segurança
+
 ✔️ Os PDFs não são publicados
 ✔️ A chave da IA fica apenas no seu computador
 ✔️ O sistema roda localmente (localhost)
 
 📌 Resumo rápido
+
 1️⃣ Instalar Node.js
 2️⃣ Instalar GitHub Desktop
 3️⃣ Clonar o projeto pelo botão Code → Open with GitHub Desktop
