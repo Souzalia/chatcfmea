@@ -100,15 +100,13 @@ O sistema precisa de uma chave para funcionar.
 Passo 1️⃣ – Criar o arquivo de configuração
 Na pasta do projeto, crie um arquivo chamado:
 
-lua
-Copiar código
 .env.local
+
 Passo 2️⃣ – Colocar a chave no arquivo
 Abra o arquivo .env.local e escreva:
 
-env
-Copiar código
 OPENAI_API_KEY=sua_chave_aqui
+
 📌 A chave deve ser obtida no site da OpenAI
 📌 Nunca compartilhe essa chave
 
@@ -125,36 +123,20 @@ remover PDFs
 
 Execute o comando:
 
-bash
-Copiar código
 npm run ingest
+
 📌 Esse passo prepara os documentos para que o chat consiga respondê-los.
 
 ▶️ Iniciar o ChatCFMEA
 Execute:
 
-bash
-Copiar código
 npm run dev
+
 Depois, abra o navegador (Chrome, Edge, etc.) e acesse:
 
-arduino
-Copiar código
 http://localhost:3000
+
 🎉 O ChatCFMEA estará pronto para uso.
-
-💬 Como usar o chat
-Digite perguntas como:
-
-“Quais são os principais pontos do documento?”
-
-“O que o PDF fala sobre responsabilidades?”
-
-“Existe algum risco mencionado?”
-
-“Resuma o conteúdo dos PDFs”
-
-As respostas serão baseadas exclusivamente nos documentos fornecidos.
 
 🔁 O que fazer no dia a dia
 Situação	O que fazer
@@ -167,15 +149,17 @@ Apenas usar o chat	npm run dev
 Não.
 Normalmente, basta rodar:
 
-bash
-Copiar código
 npm run dev
+
 ❓ Se eu trocar os PDFs?
 Sempre execute:
 
-bash
-Copiar código
 npm run ingest
+
+e depois
+
+npm run dev
+
 🔒 Segurança
 ✔️ Os PDFs não são publicados
 ✔️ A chave da IA fica apenas no seu computador
@@ -190,22 +174,3 @@ npm run ingest
 6️⃣ Rodar npm run ingest
 7️⃣ Rodar npm run dev
 8️⃣ Acessar http://localhost:3000
-
-📞 Suporte
-Em caso de dúvidas, procure o responsável pela instalação ou manutenção do sistema.
-
-yaml
-Copiar código
-
----
-
-### ✅ Importante
-- Salve o arquivo com o nome **`README.md`**
-- O GitHub renderiza automaticamente esse Markdown como página bonita
-
-Se quiser, posso:
-- adaptar o Markdown para **GitHub Pages**
-- gerar **badges** (status, licença, versão)
-- criar um **README técnico separado**
-
-É só falar 😊
