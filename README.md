@@ -90,8 +90,6 @@ Lembra daquela chave da OpenAI que você guardou? Agora vamos colocá-la no sist
 6.  Na primeira linha, depois do sinal de igual (`=`), cole a sua chave da OpenAI (aquela que começa com `sk-...`).
 7.  Salve e feche o arquivo. Sua chave está configurada!
 
-O arquivo deve ficar assim (com a sua chave, claro):
-
 ---
 
 ## 6. Como adicionar seus documentos PDF
